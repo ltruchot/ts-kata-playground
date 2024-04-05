@@ -36,7 +36,7 @@ node -v             # Verify the installation
 mkdir my-new-project  # Create a new directory
 cd my-new-project     # Navigate into the directory
 npm init --yes        # Automatically generate a package.json file
-npm i -D typescript ts-node @types/node tsx # Install TypeScript dependencies
+npm i -D typescript ts-node @types/node glob # Install TypeScript dependencies
 npx tsc --init        # Initialize TypeScript with default settings
 mkdir src             # Create a directory for source files
 touch ./src/main.ts   # Create the main TypeScript file
@@ -51,6 +51,7 @@ Modify tsconfig.json under compilerOptions as follows:
 ```json
 "rootDir": "./src",
 "outDir": "./dist",
+"sourceMap: true,
  ```
 
 hen, after compilerOptions, add:
@@ -77,11 +78,13 @@ In the `package.json` file, under the scripts section, add:
 ```
 
 Now,  
-`npm run dev`  will run your project with hot reload on save.  
+`npm run start`  will run your project with hot reload on save.  
 `npm run build` + `npm run serve` will compile and run your production build.
 
 
 ## Ensuring Code Quality
+
+### Linting
 
 To integrate a linter, run:
 ```sh
@@ -109,6 +112,20 @@ Feel free to customize your ESLint rules in eslintrc.js, for example enforce sem
     }
 ```
 
-And finally, test your codebase by running `npm run test`.
+### Testing
+
+Test your codebase by running `npm run test`.
+It will automatically run & watch tests files with the pattern `src/any-folder/any-filename.test.ts`
+
+### VSCode Debugging
+
+- Click on the "Run & Debug" icon on left icon navbar
+- Click "Create the launch.json file" link in "Run & Debug" view
+- Choose Node.js
+- Ensure program targets your outDir:  `"program": "${workspaceFolder}\\dist\\main.js"`
+- Add a `debugger` or a break point anywhere in your code
+- Choose `Run Script: start` "Run & Debug" view
+- Profit ?
+
 
 That's it, folks!
