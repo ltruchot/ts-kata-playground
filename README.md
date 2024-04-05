@@ -23,7 +23,7 @@ Alternatively, you can follow the instructions in this README to set up a basic 
 
 Choose a Linux-like terminal (e.g., Git Bash on Windows).
 
-### Installing Node 20.12.1
+### Installing Node
 
 First, install NVM (Node Version Manager) on your operating system. Then, execute the following commands:
 ```sh
@@ -53,7 +53,7 @@ Modify tsconfig.json under compilerOptions as follows:
 ```json
 "rootDir": "./src",
 "outDir": "./dist",
-"sourceMap: true,
+"sourceMap": true,
  ```
 
 hen, after compilerOptions, add:

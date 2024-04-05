@@ -1,6 +1,9 @@
 {
   "name": "ts-kata-playground",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "description": "Playground for Node + TypeScript code experiments",
   "main": "src/main.ts",
   "scripts": {
