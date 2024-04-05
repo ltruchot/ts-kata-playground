@@ -26,21 +26,21 @@ Choose a Linux-like terminal (e.g., Git Bash on Windows).
 First, install NVM (Node Version Manager) on your operating system. Then, execute the following commands:
 ```sh
 nvm install 20.12.1 # Install the latest Node.js LTS version
-nvm use 20.12.1 # Activate it
-node -v # Verify the installation
+nvm use 20.12.1     # Activate it
+node -v             # Verify the installation
 ```
 
 ## Initiating a New Project
 
 ```sh
-mkdir ts-kata-playground # Create a new directory
-cd ts-kata-playground # Navigate into the directory
-npm init --yes # Automatically generate a package.json file
+mkdir my-new-project  # Create a new directory
+cd my-new-project     # Navigate into the directory
+npm init --yes        # Automatically generate a package.json file
 npm i -D typescript ts-node @types/node tsx # Install TypeScript dependencies
-npx tsc --init # Initialize TypeScript with default settings
-mkdir src # Create a directory for source files
-touch ./src/main.ts # Create the main TypeScript file
-git init # Initialize Git for version control
+npx tsc --init        # Initialize TypeScript with default settings
+mkdir src             # Create a directory for source files
+touch ./src/main.ts   # Create the main TypeScript file
+git init              # Initialize Git for version control
 curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node # Generate a .gitignore file for Node projects
 ```
 
@@ -49,8 +49,8 @@ curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node # Genera
 Modify tsconfig.json under compilerOptions as follows:
 
 ```json
-"rootDir": "./src" /* Specify the root folder within your source files. */,
-"outDir": "./dist" /* Specify an output folder for all emitted files. */,
+"rootDir": "./src",
+"outDir": "./dist",
  ```
 
 hen, after compilerOptions, add:
@@ -58,8 +58,7 @@ hen, after compilerOptions, add:
 ```json
 {
   "compilerOptions": {
-    /* ... */
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true
   },
   "include": ["src/**/*"]
 }
@@ -97,12 +96,12 @@ Follow the prompts to configure ESLint according to your project's needs. For ex
 `Witch framework does your project use?` None of these  
 `Does your project use TypeScript` Yes  
 `Where does your code run?` Node  
-`How would you like to define a style for your project?` Use a popular style guide -> Standard  
+`How would you like to define a style for your project?` Use a popular style guide -> `Standard`  
 `What format do you want your config file to be in?` JavaScript  
 `Would you like to install them now` Yes  
 `Which package manager do you want to use?` npm  
 
-Feel free to customize your ESLint rules in eslintrc.js, for example semicolons:
+Feel free to customize your ESLint rules in eslintrc.js, for example enforce semicolons:
 ```json
     "rules": {
         "semi": ["error", "always"],
