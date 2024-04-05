@@ -1,13 +1,8 @@
-# TypeScript kata playground seed for fun and profit
+# TypeScript Kata Playground Seed for Fun and Profit
 
+**Last updated in April 2024. Recommended for VSCode.**
 
-**Last updated in April 2024. Tested with:**
-
-- Node 20.12
-- TypeScript 5.4
-- ESLint 8.57
-
-TypeScript Kata Playground offers a minimalist setup that lets you jump right into writing TypeScript functions.  
+This project offers a minimalist setup that lets you jump right into writing TypeScript functions.  
 It's designed to balance simplicity with quality, incorporating linting and testing from the get-go.
 
 
