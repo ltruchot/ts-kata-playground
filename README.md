@@ -12,6 +12,13 @@ It's designed to balance simplicity with quality, incorporating linting and test
 This project serves as a foundational template. Clone it to kickstart your Node.js and TypeScript journey.  
 Alternatively, you can follow the instructions in this README to set up a basic Node.js + TypeScript project from scratch.
 
+
+**Jobs:**
+- `npm run start` will run your project with hot reload on save.
+- `npm run test`  will run test files of your project with hot reload on save
+- `npm run build` will build your project in `/dist` folder
+- `npm run serve` will run with nodejs your production build in `dist` folder
+
 ## Setting It Up Yourself
 
 Choose a Linux-like terminal (e.g., Git Bash on Windows).
@@ -73,7 +80,7 @@ In the `package.json` file, under the scripts section, add:
 ```
 
 Now,  
-`npm run start`  will run your project with hot reload on save.  
+`npm run start` will run your project with hot reload on save.  
 `npm run build` + `npm run serve` will compile and run your production build.
 
 
