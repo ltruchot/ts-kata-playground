@@ -1,5 +1,5 @@
-import { fizzBuzz } from './fizzbuzz/fizz-buzz';
-import { helloWorld } from './helloworld/hello-world';
+import { fizzBuzz } from './fizz-buzz/fizz-buzz';
+import { helloWorld } from './hello-world/hello-world';
 
 // run helloWorld function
 helloWorld();
